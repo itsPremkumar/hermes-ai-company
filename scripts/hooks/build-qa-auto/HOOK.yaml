@@ -1,0 +1,4 @@
+name: build-qa-auto
+description: "After each agent run ends, run the generic QA harness on the bot's workspace and append verdict to ops log"
+events:
+  - agent:end
