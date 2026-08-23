@@ -1,0 +1,66 @@
+{
+ "ceo": {
+  "strategy planning": [],
+  "decision making": []
+ },
+ "cto": {
+  "architecture design": [],
+  "technology evaluation": []
+ },
+ "chief-of-staff": {
+  "project coordination": [],
+  "task management": []
+ },
+ "research-analyst": {
+  "web research": [],
+  "market analysis": []
+ },
+ "data-engineer": {
+  "data pipeline": [],
+  "data analysis": []
+ },
+ "tech-lead": {
+  "code review": [],
+  "technical leadership": []
+ },
+ "fullstack-dev": {
+  "fullstack development": [],
+  "git workflow": []
+ },
+ "backend": {
+  "backend api": [],
+  "database": []
+ },
+ "frontend": {
+  "frontend ui": [],
+  "react": []
+ },
+ "qa-lead": {
+  "test automation": [],
+  "quality assurance": []
+ },
+ "devops-engineer": {
+  "deployment": [],
+  "ci cd": []
+ },
+ "security-engineer": {
+  "security audit": [],
+  "vulnerability": []
+ },
+ "technical-writer": {
+  "documentation writing": [],
+  "technical blog": []
+ },
+ "vp-sales": {
+  "sales strategy": [],
+  "competitor analysis": []
+ },
+ "hr-recruiter": {
+  "recruiting": [],
+  "hiring": []
+ },
+ "ui-ux-designer": {
+  "ui design": [],
+  "design system": []
+ }
+}

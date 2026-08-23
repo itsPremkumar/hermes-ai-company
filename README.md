@@ -31,6 +31,7 @@ free-tier LLM inference (OpenRouter `:free` + NVIDIA NIM fallback chain). Cost: 
 | [`DEPLOY.md`](DEPLOY.md) | **Deploy anywhere:** placeholders + rebuild steps for a fresh machine |
 | [`docs/10-product-roadmap.md`](docs/10-product-roadmap.md) | The 20-product build plan |
 | [`docs/11-governance-map.md`](docs/11-governance-map.md) | Document hierarchy + honest gap register |
+| [`docs/12-skill-acquisition-plan.md`](docs/12-skill-acquisition-plan.md) | Per-bot Skills Hub acquisition plan (search→scan→install→deploy) |
 | [`docs/sop-workflows/`](docs/sop-workflows/) | Work lifecycle SOP (ACK rule, routing, review) + parallel/worktree SOP with security merge gate |
 | [`skills-hub-company/`](skills-hub-company/) | 5 executable company skills (kanban orchestrator/worker, sdlc-review, fleet CI verify, ops dashboard) |
 | [`souls/`](souls/) | All 37 bot SOUL.md personas, organized by team (+ index README) |

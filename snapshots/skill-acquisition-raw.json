@@ -1,0 +1,1036 @@
+{
+ "ceo": [
+  {
+   "id": "customs-overview-trend",
+   "name": "Query import/export trade trend data \u2014 retrieve monthly trade volume trends within a specified time range, with cursor-based pagination for smooth data exploration. Delivers time-series trade intelligence to visualize trade flow patterns and seasonal fluctuations. Designed for trade analysts, supply chain managers and market researchers who need to track trade trajectory changes, monitor monthly volume variations and identify cyclical patterns for forecasting and strategic planning across 220+ countries and territories.",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "advisor-board-pro",
+   "name": "Advisor Board Pro",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "business-definition",
+   "name": "Business Definition",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "ceo",
+   "name": "CEO / Chief Executive Officer",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "cso",
+   "name": "CSO / Chief Strategy Officer",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "capability-assessment",
+   "name": "Capability Assessment",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "decision-framework",
+   "name": "Decision Framework",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "decision-frameworks",
+   "name": "Decision Frameworks",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "01-crypto-trading-decision-framework",
+   "name": "01 Crypto Trading Decision Framework",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "crypto-trading-decision-framework",
+   "name": "Crypto Trading Decision Framework",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "kingofzhao-decision-framework",
+   "name": "KingOfZhao Decision Framework",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "autonomy-ladder",
+   "name": "Autonomy Ladder",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "cto": [
+  {
+   "id": "afrexai-system-architect",
+   "name": "System Architecture Engine",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "agent-architecture-analysis",
+   "name": "Agent Architecture Analysis",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "agent-architecture-audit",
+   "name": "Agent Architecture Audit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "agent-designer",
+   "name": "Agent Designer",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "agent-os-three-layer",
+   "name": "Agent OS (Three Layer)",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "agent-swarm-planner",
+   "name": "Agent Swarm Planner",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "chief-of-staff": [
+  {
+   "id": "ah-project-manager",
+   "name": "project-manager",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "research-analyst": [
+  {
+   "id": "deep-research",
+   "name": "Deep Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "serkaion-deep-research",
+   "name": "Deep Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "omoc-deepresearch",
+   "name": "Deep Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "deep-research-x402",
+   "name": "Deep Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "stitch-deep-research",
+   "name": "Deep Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "deep-research-framework",
+   "name": "Deep Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "serkaion-market-research",
+   "name": "Market Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "owl-market-research",
+   "name": "Market Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "abm-market-research",
+   "name": "Market Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "market-research-2",
+   "name": "Market Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "market-research",
+   "name": "Market Research",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "market-research-agent",
+   "name": "Market Research Agent",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "data-engineer": [
+  {
+   "id": "data-pipeline",
+   "name": "Data Pipeline",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "data-pipeline-agent",
+   "name": "Data Pipeline Agent",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "data-pipeline-design-review",
+   "name": "Data Pipeline Design Review",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "data-pipeline-spec",
+   "name": "Data Pipeline Spec",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "data-pipeline-toolkit",
+   "name": "Data Pipeline Toolkit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "data-pipelines",
+   "name": "Data Pipelines",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "duckdb-cli-ai-skills",
+   "name": "DuckDB CLI skills",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "duckdb-cli",
+   "name": "Duckdb Cli",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "plydb",
+   "name": "plydb",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "tech-lead": [
+  {
+   "id": "code-review",
+   "name": "Code Review",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "ai-code-audit",
+   "name": "Code Review",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "smart-code-review",
+   "name": "Code Review",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "code-review-terry",
+   "name": "Code Review",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "quack-code-review",
+   "name": "Code Review",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "terrycode-review",
+   "name": "Code Review",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "refactoring",
+   "name": "Refactoring",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/pedronauck/skills/refactoring-analysis",
+   "name": "refactoring-analysis",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/wondelai/skills/refactoring-patterns",
+   "name": "refactoring-patterns",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/charon-fan/agent-playbook/refactoring-specialist",
+   "name": "refactoring-specialist",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/wondelai/skills/refactoring-ui",
+   "name": "refactoring-ui",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "ah-refactoring-specialist",
+   "name": "refactoring-specialist",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "fullstack-dev": [
+  {
+   "id": "git-workflow",
+   "name": "Git Workflow",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "nini-git-workflow",
+   "name": "Git Workflow",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "eric-git-workflow",
+   "name": "Git Workflow Assistant",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "git-workflow-cn",
+   "name": "Git Workflow Cn",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "git-workflow-optimizer",
+   "name": "Git Workflow Optimizer",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "git-workflows",
+   "name": "Git Workflows",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "api-dev",
+   "name": "API Development",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "api-expert",
+   "name": "FastAPI\u5f00\u53d1\u4e13\u5bb6",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "webhook-debugger",
+   "name": "Webhook Debugger",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "api-development",
+   "name": "api-development",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "backend-developer",
+   "name": "backend developer",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "ah-backend-developer",
+   "name": "backend-developer",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "backend": [
+  {
+   "id": "rest-api",
+   "name": "REST API",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "rest-api-design",
+   "name": "REST API Design",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "rest-api-tester",
+   "name": "REST API Tester",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "rest-api-test-cli",
+   "name": "REST API Tester",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "greenhelix-agent-commerce-migration",
+   "name": "Agent Commerce Migration Guide: Retrofit Your REST APIs for Autonomous Agent Buyers",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "agentmemory-rest-api",
+   "name": "Agentmemory Rest Api",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "database-design",
+   "name": "Database Design",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "database-design-hardened",
+   "name": "Database Design Hardened",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "flexible-database-design",
+   "name": "Flexible Database Design \u2013 SQLite flexible schema & knowledge base skill",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "db",
+   "name": "Database",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "db-design",
+   "name": "Db Design",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "openviking-setup",
+   "name": "OpenViking Setup",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "frontend": [
+  {
+   "id": "browse-sh/finn.no/search-listings-75gq7i",
+   "name": "search-listings",
+   "source": "browse-sh",
+   "trust": "community"
+  },
+  {
+   "id": "browse-sh/sponsorpath.org/analytics-wuiwcq",
+   "name": "app-tracking-analytics-audit",
+   "source": "browse-sh",
+   "trust": "community"
+  },
+  {
+   "id": "browse-sh/vecros.com/explore-gps-denied-navigation-bkcj4o",
+   "name": "explore-gps-denied-navigation",
+   "source": "browse-sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/vercel-labs/json-render/react",
+   "name": "react",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/lobehub/lobehub/react",
+   "name": "react",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/lobehub/lobe-chat/react",
+   "name": "react",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "design-agent",
+   "name": "Design Agent",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "frontend-architecture-pro",
+   "name": "Frontend Architecture Pro",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "frontend-design-polish",
+   "name": "Frontend Design Polish",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "frontend-design-pro",
+   "name": "Frontend Design Pro \u2014 \u4e13\u4e1a\u524d\u7aef\u8bbe\u8ba1\u89c4\u8303",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "html-designer",
+   "name": "HTML Designer",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "hekouwang-typora-theme-skill",
+   "name": "Hekouwang Typora Theme Skill",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "qa-lead": [
+  {
+   "id": "skills-sh/lobehub/lobehub/testing",
+   "name": "testing",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/grafana/skills/testing",
+   "name": "testing",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/lobehub/lobe-chat/testing",
+   "name": "testing",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/tursodatabase/turso/testing",
+   "name": "testing",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/mindrally/skills/testing",
+   "name": "testing",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/dalestudy/skills/testing",
+   "name": "testing",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "my-api-test-automation",
+   "name": "API Test Automation",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "api-test-automation",
+   "name": "Api Test Automation",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "qa-test-automation-arch",
+   "name": "Qa Test Automation Arch",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "setup-unit-test",
+   "name": "Unit Test Automation",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "openclaw-pii-anonymizer-latest",
+   "name": "Openclaw Pii Anonymizer Latest",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "sdet-automation",
+   "name": "SDET Automation",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "devops-engineer": [
+  {
+   "id": "deerflow",
+   "name": "Deerflow",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "dolphindb-docker",
+   "name": "Dolphindb Docker",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "komodo",
+   "name": "Komodo",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "phy-openclaw-telegram-bot",
+   "name": "Phy Openclaw Telegram Bot",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "ollama-skill",
+   "name": "ollama-skill",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "ugreen-nas-openclaw-backup",
+   "name": "\u7eff\u8054NAS OpenClaw\u5907\u4efd",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "bytesagain-ci-cd-pipeline",
+   "name": "Bytesagain Ci Cd Pipeline",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "pilot-ci-cd-pipeline-setup",
+   "name": "Pilot Ci Cd Pipeline Setup",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "security-engineer": [
+  {
+   "id": "clawgears-security-audit",
+   "name": "Security Audit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "alvisdunlop-security-audit",
+   "name": "Security Audit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "alvis-sec-audit",
+   "name": "Security Audit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "alvis-security-audit-v2",
+   "name": "Security Audit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "alvis2-security-audit",
+   "name": "Security Audit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "aptos-security-audit",
+   "name": "Security Audit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/mastepanoski/claude-skills/owasp-llm-top10",
+   "name": "owasp-llm-top10",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/harishwarrior/flutter-claude-skills/owasp-mobile-security-checker",
+   "name": "owasp-mobile-security-checker",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/hoodini/ai-agents-skills/owasp-security",
+   "name": "owasp-security",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/agamm/claude-code-owasp/owasp-security",
+   "name": "owasp-security",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/sergiodxa/agent-skills/owasp-security-check",
+   "name": "owasp-security-check",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/nickcrew/claude-ctx-plugin/owasp-top-10",
+   "name": "owasp-top-10",
+   "source": "skills.sh",
+   "trust": "community"
+  }
+ ],
+ "technical-writer": [
+  {
+   "id": "skills-sh/anthropics/knowledge-work-plugins/documentation",
+   "name": "documentation",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/mcollina/skills/documentation",
+   "name": "documentation",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/sickn33/antigravity-awesome-skills/documentation",
+   "name": "documentation",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "documentation",
+   "name": "Documentation",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/addyosmani/agent-skills/documentation-and-adrs",
+   "name": "documentation-and-adrs",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/charon-fan/agent-playbook/documentation-engineer",
+   "name": "documentation-engineer",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "technical-writing",
+   "name": "technical writing",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "china-api-doc-generator",
+   "name": "China API Doc Generator",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "tech-blog-generator",
+   "name": "Tech Blog Generator",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "toolweb-technical-writer",
+   "name": "Technical Writer",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "ah-documentation-writer",
+   "name": "documentation-writer",
+   "source": "clawhub",
+   "trust": "community"
+  }
+ ],
+ "vp-sales": [
+  {
+   "id": "competitor-analysis",
+   "name": "Competitor Analysis",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "competitor-analysis-local",
+   "name": "Competitor Analysis Local",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "competitor-analysis-report",
+   "name": "Competitor Analysis Report",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "gingiris-competitor-analysis",
+   "name": "Competitor Analysis \u2014 SEO/GEO Intelligence & Positioning Strategy",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "betacompetit",
+   "name": "Beta Competitor Analysis",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "draco-competitor-analysis",
+   "name": "Draco Competitor Analysis",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/coreyhaines31/marketingskills/pricing",
+   "name": "pricing",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/slavingia/skills/pricing",
+   "name": "pricing",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "miniest-pricing",
+   "name": "Pricing",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "me-pricing",
+   "name": "Pricing",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "pricing",
+   "name": "Pricing",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/nexu-io/open-design/pricing-page",
+   "name": "pricing-page",
+   "source": "skills.sh",
+   "trust": "community"
+  }
+ ],
+ "hr-recruiter": [
+  {
+   "id": "recruiting-pro",
+   "name": "Recruiting",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "recruiting",
+   "name": "Recruiting",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/anthropics/knowledge-work-plugins/recruiting-pipeline",
+   "name": "recruiting-pipeline",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "recruiting-interview-kit",
+   "name": "Recruiting Interview Kit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "recruiting-resume-screening",
+   "name": "Recruiting Resume Screening",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "recruiting-skillset",
+   "name": "Recruiting Skillset",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "interview",
+   "name": "Interview",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/addyosmani/agent-skills/interview-me",
+   "name": "interview-me",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/anthropics/knowledge-work-plugins/interview-prep",
+   "name": "interview-prep",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/paramchoudhary/resumeskills/interview-prep-generator",
+   "name": "interview-prep-generator",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/phuryn/pm-skills/interview-script",
+   "name": "interview-script",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/owl-listener/designer-skills/interview-script",
+   "name": "interview-script",
+   "source": "skills.sh",
+   "trust": "community"
+  }
+ ],
+ "ui-ux-designer": [
+  {
+   "id": "design-system",
+   "name": "Design System",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "design-system-audit",
+   "name": "Design System Audit",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "design-system-builder",
+   "name": "Design System Builder",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "design-system-components",
+   "name": "Design System Components",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "design-system-creation",
+   "name": "Design System Creation",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "design-system-patterns",
+   "name": "Design System Patterns",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "ux",
+   "name": "UX",
+   "source": "clawhub",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/jezweb/claude-skills/ux-audit",
+   "name": "ux-audit",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/mblode/agent-skills/ux-audit",
+   "name": "ux-audit",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/mastepanoski/claude-skills/ux-audit-rethink",
+   "name": "ux-audit-rethink",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/jezweb/claude-skills/ux-compare",
+   "name": "ux-compare",
+   "source": "skills.sh",
+   "trust": "community"
+  },
+  {
+   "id": "skills-sh/anthropics/knowledge-work-plugins/ux-copy",
+   "name": "ux-copy",
+   "source": "skills.sh",
+   "trust": "community"
+  }
+ ]
+}
