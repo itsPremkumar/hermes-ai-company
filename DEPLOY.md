@@ -18,7 +18,7 @@ This folder is self-contained. Anyone can rebuild the company on any machine
 | `%HERMES_HOME%` | your Hermes data dir (`%LOCALAPPDATA%\hermes` on Windows, `~/.hermes` elsewhere) |
 | `<owner-email>` | your email |
 
-## Rebuild steps (30–60 min)
+## Rebuild steps (~90 min)
 
 ### 1. Create bot profiles
 For every entry in `configs/FLEET.json`, create a profile and apply its config:

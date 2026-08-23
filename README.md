@@ -8,7 +8,7 @@
 
 ## 1. The Company in One Paragraph
 
-25 named Hermes bots (each a real Hermes profile) form an IT company: an executive team that
+34 named Hermes bots (each a real Hermes profile) form an IT company: an executive team that
 plans, a delivery team that builds software in isolated git worktrees, a QA gate that refuses
 unverified work, and growth/research teams that market and study the market. A Kanban
 production line converts queued task cards into shipped GitHub repositories — one build at a
@@ -61,7 +61,7 @@ free-tier LLM inference (OpenRouter `:free` + NVIDIA NIM fallback chain). Cost: 
 | Item | Value |
 |---|---|
 | Hermes version at build | v0.20.5 (2026.8.19) |
-| Bots | 25 tooled (+10 minimal coordination roles) |
+| Bots | 34 tooled (+2 minimal coordination roles) |
 | Teams | Executive · Delivery · Growth · Research · Special-Ops |
 | Production line | Kanban board `it-company-ops`, 1 worker max |
 | Inference | OpenRouter `:free` ×3 models + NVIDIA NIM fallback |
