@@ -1,1 +1,0 @@
-patched 2026-07-23: added mandatory visual-verification gate (gotcha #4), scripts/verify-visual.ts, references/avs-visual-defects.md. Three real defects (orientation ignored, watermark black-box, untranslated multilingual captions) were caught ONLY by vision_analyze frame inspection, never by typecheck/unit/ffprobe.

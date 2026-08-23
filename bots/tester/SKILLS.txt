@@ -1,0 +1,14 @@
+apple
+autonomous-ai-agents
+creative
+devops
+email
+github
+media
+mlops
+note-taking
+productivity
+research
+smart-home
+social-media
+software-development
