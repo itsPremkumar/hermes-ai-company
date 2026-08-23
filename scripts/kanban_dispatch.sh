@@ -25,6 +25,10 @@ elif q == "next":
 PYEOF
 }
 
+
+# Optional adaptive intake (python handles parsing; silent on absence)
+python "$LOCALAPPDATA/hermes/scripts/adaptive_intake.py" 2>/dev/null || true
+
 RUNNING=$(read_db running)
 [ "$RUNNING" -ge 1 ] && exit 0            # a build is in flight - stay quiet
 
