@@ -46,6 +46,7 @@ C:\one\hermes-ai-company\
 ├── README.md              ← you are here
 ├── docs\                  ← the 8 manuals above
 ├── souls\                 ← every bot's SOUL.md by team (executive/, delivery/, …)
+├── bots\                  ← 📁 one folder per bot (34): SOUL.md + config.yaml + skills/ + README
 ├── scripts\               ← ALL company scripts (7)
 ├── configs\               ← sanitized per-bot config snapshots + FLEET.json
 ├── bundles\               ← skill bundles
