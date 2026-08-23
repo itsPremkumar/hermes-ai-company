@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Kanban single-flow dispatcher v3 (pure python - WSL-free for gateway cron).
 Releases ONE blocked card per tick only when nothing is running. Silent unless failing."""
-import json, os, sqlite3, subprocess, sys
+import json, os, sqlite3, subprocess, sys, time
 
 HERMES = os.path.join(os.environ.get("LOCALAPPDATA",""), "hermes")
 DB = os.path.join(HERMES, "kanban", "boards", "it-company-ops", "kanban.db")
@@ -37,7 +37,45 @@ def _veto_sweep():
 
 
 
+
+def _supervisor_rotate():
+    """AVO-style supervisor: stagnation -> rotate model/approach; park after 3."""
+    rows = q("select id, consecutive_failures, model_override, provider_override, title "
+             "from tasks where status='blocked' and consecutive_failures >= 2")
+    if not rows:
+        return
+    chain = [("openrouter", "poolside/laguna-s-2.1:free"),
+             ("nvidia", "nvidia/llama-3.3-nemotron-super-49b-v1"),
+             ("openrouter", "z-ai/glm-5.2:free")]
+    for tid, fails, cur_model, cur_prov, title in rows:
+        rot = min(fails - 1, 3)
+        c = sqlite3.connect(DB, timeout=15)
+        if rot >= 3:
+            # exhausted: keep parked, alert once via event
+            already = c.execute("select count(*) from task_events where task_id=? and kind='SUPERVISOR_PARKED'", (tid,)).fetchone()[0]
+            if not already:
+                c.execute("insert into task_events(task_id,kind,payload,created_at) values(?,?,?,?)",
+                          (tid, "SUPERVISOR_PARKED",
+                           json.dumps({"reason": "3 rotations failed", "title": title}), time.time()))
+                print(f"SUPERVISOR: {tid} parked after 3 rotations - needs human attention")
+            c.commit(); c.close()
+            continue
+        prov, model = chain[rot % len(chain)]
+        hint = ("PREVIOUS ATTEMPT FAILED repeatedly. Do NOT repeat the same approach. "
+                "Change architecture/library strategy before coding.")
+        if cur_model != model:
+            c.execute("update tasks set model_override=?, provider_override=? where id=?",
+                      (model, prov, tid))
+        c.execute("update tasks set body=body||? where id=?", (f"\n\n[SUPERVISOR v{rot}] {hint}", tid))
+        c.execute("insert into task_events(task_id,kind,payload,created_at) values(?,?,?,?)",
+                  (tid, "SUPERVISOR_REDIRECT",
+                   json.dumps({"rotation": rot, "to": f"{prov}/{model}"}), time.time()))
+        c.commit(); c.close()
+        print(f"SUPERVISOR: {tid} rotation {rot} -> {prov}/{model}")
+
+
 try:
+    _supervisor_rotate()
     _veto_sweep()
     running = q("select count(*) from tasks where status='running'")[0][0]
     if running >= 1:

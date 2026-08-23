@@ -1,0 +1,1 @@
+{"ts": "2026-08-23T20:08:06", "card": "t_4bd6be9b", "project": "mcp-toolforge", "assignee": "mcp-specialist", "status": "done", "worked": ["per-project-root pytest isolation", "venv python for pytest"], "failed": ["pip-installing into shared venv contaminates imports"]}

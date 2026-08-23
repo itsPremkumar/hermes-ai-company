@@ -45,3 +45,21 @@ logged → worker keeps going. Pass → completion accepted.
 
 ## Success criterion — MET
 A card with an empty workspace can NEVER reach status='done'.
+
+
+## CORRECTION (2026-08-23): company scripts live in COMPANY profiles, not bunny
+
+bunny = owner's personal session profile — NOT part of the company hierarchy.
+Script ownership now follows the org chart:
+
+| Script(s) | Owner profile | Role |
+|---|---|---|
+| kanban_dispatch.py, company_watchdog.py, model_health.py, adaptive_intake.py | **devops-engineer** | ops infrastructure |
+| adaptive_mode.py | **ceo** | work classification/assignment |
+| company_lessons.py + agent-builder/memories/lessons.jsonl | **agent-builder** | cross-build memory |
+| proof_checklist.py, qa_harness.py, proof_*.py | **qa-lead** | quality gate |
+| scan_secrets.py | **security-engineer** | security proofs |
+
+Runtime note: gateway cron reads from central `%HERMES_HOME%/scripts/` by
+filename only — that directory is a runtime mirror; master copies live in the
+owner bot's `scripts/` dir. bunny holds no company scripts.
