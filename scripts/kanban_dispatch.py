@@ -10,7 +10,35 @@ def q(sql):
     c = sqlite3.connect(DB, timeout=15)
     r = c.execute(sql).fetchall(); c.close(); return r
 
+
+def _veto_sweep():
+    """VETO self-declared completions whose proofs fail (earned completion)."""
+    rows = q("select id, result from tasks where status='running' and result is not null")
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import proof_checklist as pc
+    import time as _t
+    for tid, result in rows:
+        try:
+            rj = json.loads(result) if isinstance(result, str) else (result or {})
+        except Exception:
+            continue
+        if not (isinstance(rj, dict) and str(rj.get("status")).lower() in ("complete","done","success")):
+            continue
+        rc = pc.cmd_verify(tid)
+        if rc == 0:
+            continue   # earned
+        c = sqlite3.connect(DB, timeout=15)
+        c.execute("update tasks set result=NULL where id=?", (tid,))
+        c.execute("insert into task_events(task_id,kind,payload,created_at) values(?,?,?,?)",
+                  (tid, "COMPLETION_VETOED",
+                   json.dumps({"failing": "checklist proofs failing"}), _t.time()))
+        c.commit(); c.close()
+        print(f"VETOED completion of {tid}: proofs failing")
+
+
+
 try:
+    _veto_sweep()
     running = q("select count(*) from tasks where status='running'")[0][0]
     if running >= 1:
         sys.exit(0)                       # a build is in flight - stay quiet

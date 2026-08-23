@@ -12,6 +12,7 @@ Checks (each independent, failures accumulate):
 Exit 0 = PASS, exit 1 = FAIL (with per-check detail printed).
 """
 import os, re, subprocess, sys, py_compile
+HERMES = os.path.expandvars(r"%LOCALAPPDATA%\hermes")
 
 SKIP_DIRS = {"venv", ".venv", "node_modules", "__pycache__", ".git", "dist", "build"}
 SECRET_PAT = re.compile(r"(sk-[A-Za-z0-9]{16,}|ghp_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[0-9A-Z]{16}|xox[baprs]-[A-Za-z0-9-]{10,})")
@@ -40,18 +41,46 @@ def main():
     ok = not bad; failed |= not ok
     results.append(("COMPILE", ok, f"{len(pys)} files checked" + (f"; {len(bad)} broken" if bad else "")))
 
-    # 2a. pytest / test files
-    tests = [f for f in pys if os.path.basename(f).startswith("test_") or "/tests/" in f.replace("\\", "/")]
-    tr = None
-    if tests:
-        tr = subprocess.run([sys.executable, "-m", "pytest", "-x", "-q", root],
-                            capture_output=True, text=True, timeout=300)
-        ok = tr.returncode == 0; failed |= not ok
-        tail = (tr.stdout or "").strip().splitlines()[-1:] or ["no output"]
-        results.append(("PYTEST", ok, tail[0][:120]))
-    else:
+    # 2a. pytest / test files — per-project roots so package imports resolve
+    _venv_py = os.path.join(os.environ.get("LOCALAPPDATA",""), "hermes", "hermes-agent", "venv", "Scripts", "python.exe")
+    _py_exe = _venv_py if os.path.isfile(_venv_py) else sys.executable
+    project_roots = []
+    for dp, ds, files in os.walk(root):
+        if ".git" in dp:
+            ds[:] = [d for d in ds if d != "__pycache__"]
+            continue
+        has_pkg_tests = any(d.lower() == "tests" for d in ds)
+        has_direct = any(f.startswith("test_") and f.endswith(".py") for f in files)
+        if has_pkg_tests or has_direct:
+            # this dir is a project root; do not descend further into it
+            ds[:] = [d for d in ds if d.lower() != "tests"]
+            project_roots.append(dp)
+    if not project_roots:
+        tests = []
         results.append(("PYTEST", True, "no test files found (skipped)"))
-
+    else:
+        all_ok, tails = True, []
+        others = [p for p in project_roots if p != root]
+        for rt in sorted(project_roots):
+            _env = dict(os.environ)
+            _src = os.path.join(rt, "src")
+            _pp = os.pathsep.join([x for x in (_src, rt, _env.get("PYTHONPATH","")) if x])
+            _env["PYTHONPATH"] = _pp
+            cmd = [_py_exe, "-m", "pytest", "-x", "-q", rt, "--no-header",
+                   "-p", "no:cacheprovider"]
+            # top-level run: exclude nested project dirs (tested separately)
+            if rt == root:
+                for o in others:
+                    rel = os.path.relpath(o, rt)
+                    if not rel.startswith(".."):
+                        cmd += ["--ignore", os.path.join(rt, rel)]
+            tr = subprocess.run(cmd, capture_output=True, text=True, timeout=300, cwd=rt,
+                                env=_env)
+            tail = ((tr.stdout or "").strip().splitlines() or ["?"])[-1]
+            tails.append(f"{os.path.relpath(rt, root) or '.'}: {tail[:60]}")
+            all_ok &= (tr.returncode == 0)
+        ok = all_ok; failed |= not ok
+        results.append(("PYTEST", ok, "; ".join(tails)[:160]))
     # 2b. self-test subcommands
     ran = 0
     for f in pys:
