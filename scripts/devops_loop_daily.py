@@ -2,7 +2,7 @@
 """
 devops_loop_daily.py — entrypoint for the Hermes cron job 'devops-loop-daily'.
 
-The real engine is <workspace-root>/_devops_loop/loop.py (see <workspace-root>/_devops_loop/README.md).
+The real engine is C:/one/_devops_loop/loop.py (see C:/one/_devops_loop/README.md).
 This thin wrapper exists because the Hermes `no_agent` cron runner executes
 `.sh` scripts via /bin/bash, which is NOT present in the cron sandbox (only the
 interactive terminal has bash). `.py` scripts run under the Hermes venv Python,
@@ -18,9 +18,9 @@ import os
 import subprocess
 import sys
 
-LOOP = r"<workspace-root>/_devops_loop/loop.py"
+LOOP = r"C:/one/_devops_loop/loop.py"
 ROOT = r"C:/one"
-LOOP_DIR = r"<workspace-root>/_devops_loop"
+LOOP_DIR = r"C:/one/_devops_loop"
 
 
 def main():
