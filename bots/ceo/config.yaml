@@ -1,12 +1,5 @@
-fallback_providers:
-  - provider: nvidia
-    model: nvidia/llama-3.3-nemotron-super-49b-v1
-  - provider: openrouter
-    model: poolside/laguna-s-2.1:free
-  - provider: openrouter
-    model: z-ai/glm-5.2:free
 model:
-  default: nvidia/nemotron-3-super-120b-a12b:free
+  default: poolside/laguna-s-2.1:free
   provider: nous
   base_url: https://inference-api.nousresearch.com/v1
 providers:
@@ -44,21 +37,29 @@ providers:
       - kilocode:kilo-auto/free
       - kilocode:nvidia/nemotron-nano-9b-v2:free
       - kilocode:minimax/minimax-m2.5:free
-      - kilocode:nvidia/nemotron-3-super-120b-a12b:free
+      - kilocode:poolside/laguna-s-2.1:free
       - kilocode:arcee-ai/trinity-large-preview:free
   tokenrouter:
     api: https://api.tokenrouter.com/v1
     default_model: moonshotai/kimi-k3-free
     key_env: TOKENROUTER_API_KEY
     name: TokenRouter
+fallback_providers:
+  - provider: nvidia
+    model: nvidia/llama-3.3-nemotron-super-49b-v1
+  - provider: openrouter
+    model: poolside/laguna-s-2.1:free
+  - provider: openrouter
+    model: poolside/laguna-s-2.1:free
 toolsets:
-  - hermes-cli
   - memory
   - session_search
   - cronjob
   - clarify
   - todo
   - skills
+  - kanban
+  - delegation
 agent:
   max_turns: 60
   personalities:
@@ -140,10 +141,10 @@ display:
   busy_input_mode: interrupt
   bell_on_complete: false
   show_reasoning: false
+  background_process_notifications: concise
   streaming: true
   skin: default
   interim_assistant_messages: true
-  background_process_notifications: concise
   busy_ack_detail: true
   cleanup_progress: false
   long_running_notifications: true
@@ -163,8 +164,8 @@ memory:
   user_profile_enabled: true
   memory_char_limit: 2200
   user_char_limit: 1375
-  flush_min_turns: 6
   nudge_interval: 10
+  flush_min_turns: 6
 delegation:
   max_iterations: 250
 skills:
@@ -197,65 +198,83 @@ _config_version: 37
 group_sessions_per_user: true
 platform_toolsets:
   cli:
+    - bfl
+    - clarify
+    - cronjob
+    - delegation
+    - kanban
     - memory
     - session_search
-    - cronjob
-    - clarify
-    - todo
     - skills
-  discord:
-    - hermes-discord
-  google_chat:
-    - hermes-google_chat
-  homeassistant:
-    - hermes-homeassistant
-  qqbot:
-    - hermes-qqbot
-  signal:
-    - hermes-signal
-  slack:
-    - hermes-slack
-  teams:
-    - hermes-teams
-  telegram:
-    - hermes-telegram
-  whatsapp:
-    - hermes-whatsapp
-  yuanbao:
-    - hermes-yuanbao
-session_reset:
-  at_hour: 4
-  idle_minutes: 1440
-  mode: both
+    - todo
 known_plugin_toolsets:
   cli:
+    - a2a
     - spotify
-mcp_servers:
-  ruflo:
-    command: bash
-    args:
-      - bin/ruflo-mcp-stdio.sh
-      - --connect-timeout
-      - '60'
-    enabled: false
-    tools:
-      exclude: []
-  ruflo-free:
-    command: bash
-    args:
-      - bin/ruflo-freecode.sh
-    enabled: true
-  freecode:
-    command: bash
-    args:
-      - bin/freecode-stdio.sh
-    enabled: false
-  openspace:
-    command: bash
-    args:
-      - <path-to>/openspace-mcp-stdio.sh  # adjust to your install
-    enabled: true
-plugins:
-  enabled:
-    - orca-status
-    - pixel-office
+known_builtin_toolsets:
+  cli:
+    - bfl
+    - browser
+    - clarify
+    - code_execution
+    - computer_use
+    - context_engine
+    - cronjob
+    - delegation
+    - discord
+    - discord_admin
+    - file
+    - homeassistant
+    - image_gen
+    - memory
+    - session_search
+    - skills
+    - spotify
+    - stt
+    - terminal
+    - todo
+    - tts
+    - video
+    - video_gen
+    - vision
+    - web
+    - x_search
+    - yuanbao
+
+# ── Security ──────────────────────────────────────────────────────────
+# Secret redaction is ON by default — strings that look like API keys,
+# tokens, and passwords are masked in tool output, logs, and chat
+# responses before the model or user ever sees them. Set redact_secrets
+# to false to disable (e.g. when developing the redactor itself).
+# tirith pre-exec scanning is enabled by default when the tirith binary
+# is available. Configure via security.tirith_* keys or env vars
+# (TIRITH_ENABLED, TIRITH_BIN, TIRITH_TIMEOUT, TIRITH_FAIL_OPEN).
+#
+# security:
+#   redact_secrets: true
+#   tirith_enabled: true
+#   tirith_path: "tirith"
+#   tirith_timeout: 5
+#   tirith_fail_open: true
+
+# ── Fallback Model ────────────────────────────────────────────────────
+# Automatic provider failover when primary is unavailable.
+# Uncomment and configure to enable. Triggers on rate limits (429),
+# overload (529), service errors (503), or connection failures.
+#
+# Supported providers:
+#   openrouter   (OPENROUTER_API_KEY)  — routes to any model
+#   openai-codex (OAuth — hermes auth) — OpenAI Codex
+#   nous         (OAuth — hermes auth) — Nous Portal
+#   zai          (ZAI_API_KEY)         — Z.AI / GLM
+#   kimi-coding  (KIMI_API_KEY)        — Kimi / Moonshot
+#   kimi-coding-cn (KIMI_CN_API_KEY)   — Kimi / Moonshot (China)
+#   minimax      (MINIMAX_API_KEY)     — MiniMax
+#   minimax-cn   (MINIMAX_CN_API_KEY)  — MiniMax (China)
+#   bedrock      (AWS IAM / boto3)     — AWS Bedrock (Converse API)
+#
+# For custom OpenAI-compatible endpoints, add base_url and key_env.
+#
+# fallback_model:
+#   provider: openrouter
+#   model: anthropic/claude-sonnet-4
