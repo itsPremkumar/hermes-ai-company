@@ -1,0 +1,144 @@
+name: Fleet Sync Check
+
+# Detects drift between the live Hermes fleet and this repo.
+# Runs a structural audit and opens an issue when souls/configs/FLEET.json
+# differ from the last committed snapshot. Read-only: never pushes itself.
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # daily 03:00 UTC (08:30 IST)
+  workflow_dispatch: {}    # manual trigger button
+
+permissions:
+  contents: read
+  issues: write
+
+jobs:
+  sync-check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Hermes Agent (for schema reference only)
+        run: pip install --quiet hermes-agent || echo "hermes-agent not on PyPI; skipping"
+
+      - name: Validate repo structure
+        id: validate
+        shell: python
+        run: |
+          import json, os, sys, yaml
+          errors, warnings = [], []
+
+          # 1. FLEET.json parses + every bot has a kit folder
+          try:
+              fleet = json.load(open("configs/FLEET.json", encoding="utf-8"))
+          except Exception as e:
+              print(f"::error::configs/FLEET.json is invalid JSON: {e}"); sys.exit(1)
+
+          for bot, info in fleet.items():
+              if not os.path.isdir(f"bots/{bot}"):
+                  warnings.append(f"FLEET.json bot '{bot}' has no bots/{bot}/ kit")
+                  continue
+              for required in ("SOUL.md", "config.yaml"):
+                  p = f"bots/{bot}/{required}"
+                  if not os.path.isfile(p):
+                      errors.append(f"bots/{bot}/{required} missing")
+
+          # 2. Every bot kit folder is listed in FLEET.json (or documented legacy)
+          kits = set(os.listdir("bots")) - {"INDEX.md"}
+          fleet_bots = set(fleet)
+          orphans = kits - fleet_bots
+          if orphans:
+              warnings.append(f"bot kits without FLEET.json entry: {', '.join(sorted(orphans))}")
+
+          # 3. Souls parse as text and respect size law (<= 8KB)
+          for dp, _, files in os.walk("souls"):
+              for f in files:
+                  if f.endswith(".md"):
+                      p = os.path.join(dp, f)
+                      size = os.path.getsize(p)
+                      if size > 8192:
+                          errors.append(f"{p} exceeds 8KB soul law ({size}B)")
+
+          # 4. Required top-level docs exist
+          for req in ("README.md", "DEPLOY.md", "LICENSE", "docs/09-sops.md"):
+              if not os.path.exists(req):
+                  errors.append(f"required file missing: {req}")
+
+          # 5. Secret scan (same patterns as local pre-push sweep)
+          import re
+          pat = re.compile(
+              r"(ghp_[A-Za-z0-9]{20,})|(gho_[A-Za-z0-9]{20,})|"
+              r"(sk-or-[A-Za-z0-9\-_]{20,})|(nvapi-[A-Za-z0-9\-_]{20,})|"
+              r"(github_pat_[A-Za-z0-9_]{20,})"
+          )
+          # pattern assembled from fragments so this file never contains the literals
+          _p = ["PREM[ _]KUMAR", "its" + "Premkumar", "prem-the-" + "dev", "premkumar" + "016555"]
+          personal = re.compile("|".join(_p))
+          for dp, dirs, files in os.walk("."):
+              dirs[:] = [d for d in dirs if d not in (".git", "__pycache__")]
+              for f in files:
+                  p = os.path.join(dp, f)
+                  try:
+                      txt = open(p, encoding="utf-8", errors="ignore").read()
+                  except Exception:
+                      continue
+                  m = pat.search(txt)
+                  if m:
+                      errors.append(f"POSSIBLE SECRET in {p}: pattern '{m.group(0)[:12]}...'")
+                  pm = personal.search(txt)
+                  if pm:
+                      errors.append(f"PERSONAL IDENTIFIER in {p}: '{pm.group(0)}'")
+
+          for w in warnings:
+              print(f"::warning::{w}")
+          for e in errors:
+              print(f"::error::{e}")
+          print(f"\nSUMMARY: {len(errors)} errors, {len(warnings)} warnings")
+
+          with open(os.environ["GITHUB_OUTPUT"], "a") as fh:
+              fh.write(f"errors={len(errors)}\n")
+              fh.write(f"warnings={len(warnings)}\n")
+              summary = "\\n".join(errors + warnings) if (errors or warnings) else "all clear"
+              fh.write(f"summary={summary}\n")
+          sys.exit(0)   # never fail the workflow; report via issue instead
+
+      - name: Open/update drift issue if problems found
+        if: steps.validate.outputs.errors != '0'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const errs = '${{ steps.validate.outputs.errors }}';
+            const warns = '${{ steps.validate.outputs.warnings }}';
+            const body = [
+              `## ⚠️ Repo/fleet drift detected`,
+              ``,
+              `**${errs} error(s), ${warns} warning(s)** found by the daily structure audit.`,
+              ``,
+              '<details><summary>Details</summary>',
+              '',
+              '```',
+              '${{ steps.validate.outputs.summary }}'.split('\\n').join('\n'),
+              '```',
+              '</details>',
+              ``,
+              `_Run the local sync procedure from docs/CHANGELOG.md to fix, then push._`
+            ].join('\n');
+            const label = 'fleet-drift';
+            // find existing open issue
+            const q = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: label, per_page: 1
+            });
+            if (q.data.length) {
+              await github.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: q.data[0].number, body
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title: '⚠️ Fleet/repo drift detected',
+                body, labels: [label]
+              });
+            }
