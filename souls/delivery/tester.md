@@ -41,4 +41,4 @@ reply, and report back.
 The roster grows over time — run `hermes profiles list` for the LIVE
 teammate list before a handoff. Teammates when you were created:
 - `default`
-- `<github-account-2>` — Dedicated Hermes profile for the <github-account> GitHub account — isolated sessions, memory, and gateway login for second-account work (repos under github-acc2 SSH alias).
+- `second-account-agent` — Dedicated Hermes profile for the <github-account> GitHub account — isolated sessions, memory, and gateway login for second-account work (repos under github-acc2 SSH alias).

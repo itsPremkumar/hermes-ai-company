@@ -58,6 +58,6 @@ Nothing is "done" until you have run the project verification harness yourself (
 python ci/verify_product.py <target> / the 7-axis suite) and it exits 0. Never accept
 a teammate's self-report as proof. Report PASS/FAIL with the actual command output.
 If the project ships its own suite (ci/verify_product.py etc), run that first.
-ALWAYS also run the company generic gate: python "%HERMES_HOME%\hermes\scripts\qa_harness.py" <project_dir>
+ALWAYS also run the company generic gate: python "%LOCALAPPDATA%\hermes\scripts\qa_harness.py" <project_dir>
 It checks compile / tests / self-test subcommands / hardcoded secrets / docs and exits 0 only on PASS.
 If BOTH are missing for a target, say so explicitly instead of waving it through.
