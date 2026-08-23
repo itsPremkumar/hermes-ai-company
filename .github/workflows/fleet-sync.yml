@@ -45,7 +45,12 @@ jobs:
                       errors.append(f"bots/{bot}/{required} missing")
 
           # 2. Every bot kit folder is listed in FLEET.json (or documented legacy)
-          kits = set(os.listdir("bots")) - {"INDEX.md"}
+          legacy = set()
+          lm = "bots/LEGACY.md"
+          if os.path.exists(lm):
+              legacy = {w.strip().rstrip(",") for line in open(lm, encoding="utf-8")
+                        if line.startswith("Legacy:") for w in line.replace("Legacy:","").split()}
+          kits = set(os.listdir("bots")) - {"INDEX.md", "LEGACY.md"} | legacy
           fleet_bots = set(fleet)
           orphans = kits - fleet_bots
           if orphans:
