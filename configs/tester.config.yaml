@@ -1,0 +1,7 @@
+model:
+  provider: nous
+  default: poolside/laguna-s-2.1:free
+_config_version: 37
+plugins:
+  enabled:
+    - pixel-office

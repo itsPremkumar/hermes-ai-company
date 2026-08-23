@@ -1,0 +1,35 @@
+id,title,assignee,status,priority,created_by
+t_0c8b37bd,Backend: Core logic,senior-backend,archived,0,chief-of-staff
+t_11475af5,PO: Requirements doc,product-owner,archived,0,chief-of-staff
+t_20284017,Build 20 Agentic AI Projects (push to <github-account>),chief-of-staff,archived,0,chief-of-staff
+t_207ee7a7,QA Lead: Test strategy,qa-lead,archived,0,chief-of-staff
+t_5fbd0a67,Architect: System design,solution-architect,archived,0,chief-of-staff
+t_6a847c03,Write a one-paragraph product pitch for a habit-tracker app,qa-engineer,archived,0,chief-of-staff
+t_6bb2eb21,UX: Wireframe,ui-ux-designer,archived,0,chief-of-staff
+t_898b1a96,Tech Writer: README,technical-writer,archived,0,chief-of-staff
+t_a78389d2,Tech Lead: API contract,tech-lead,archived,0,chief-of-staff
+t_cf180d02,Add health-check endpoint,senior-backend,archived,0,chief-of-staff
+t_ddd1a64f,Build URL Shortener MVP,chief-of-staff,archived,0,chief-of-staff
+t_e5d81b77,Design login API contract,tech-lead,archived,0,chief-of-staff
+t_e9ef0574,DevOps: Docker + CI,devops-engineer,archived,0,chief-of-staff
+t_1003d0ab,Build: doc-watcher,fullstack-dev,blocked,0,chief-of-staff
+t_1a41381f,Build: link-archiver,fullstack-dev,blocked,0,chief-of-staff
+t_307998c8,Build: meeting-minutes-ai,fullstack-dev,blocked,0,chief-of-staff
+t_3bd8e377,Build: price-patrol,fullstack-dev,blocked,0,chief-of-staff
+t_7978e04b,Build: knowledge-graph,fullstack-dev,blocked,0,chief-of-staff
+t_8c48f4bb,Build: flashcard-forge,fullstack-dev,blocked,0,chief-of-staff
+t_942ea651,Build: habit-coach,fullstack-dev,blocked,0,chief-of-staff
+t_b61416a2,Build: resume-tailor,fullstack-dev,blocked,0,chief-of-staff
+t_c3eb0020,Build: code-review-bot,fullstack-dev,blocked,0,chief-of-staff
+t_d2000488,Build: story-spinner,fullstack-dev,blocked,0,chief-of-staff
+t_d56fc78c,Build: self-host-monitor,fullstack-dev,blocked,0,chief-of-staff
+t_e3209616,Build: recipe-genie,fullstack-dev,blocked,0,chief-of-staff
+t_e54a2a96,Build: rss-forge,fullstack-dev,blocked,0,chief-of-staff
+t_e596f6be,Build: invoice-extractor,fullstack-dev,blocked,0,chief-of-staff
+t_e7138be4,Build: seo-auditor,fullstack-dev,blocked,0,chief-of-staff
+t_f16fb2a4,Build: tweet-thread-bot,fullstack-dev,blocked,0,chief-of-staff
+t_44e50741,Build: research-radar,fullstack-dev,done,0,chief-of-staff
+t_c7e7996c,Gateway auto-dispatch test,qa-lead,done,0,chief-of-staff
+t_e003a0f8,Build: video-newsie,fullstack-dev,done,0,chief-of-staff
+t_5925a9d3,Build: legal-clause-finder,fullstack-dev,ready,0,chief-of-staff
+t_e52c265a,Build: agent-router,fullstack-dev,ready,0,chief-of-staff

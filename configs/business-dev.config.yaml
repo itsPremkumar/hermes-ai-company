@@ -1,0 +1,250 @@
+model:
+  default: z-ai/glm-5.2:free
+  provider: nous
+  base_url: https://inference-api.nousresearch.com/v1
+providers:
+  ollama-launch:
+    api: http://127.0.0.1:11434/v1
+    default_model: RefinedNeuro/vibethinker-3b-hermes
+    models:
+      - RefinedNeuro/vibethinker-3b-hermes
+      - RefinedNeuro/vibethinker-3b-hermes:latest
+      - llama3.2:1b
+      - NitrAI/VibeThinker-3B:latest
+      - moondream:latest
+    name: Ollama
+  free-llm-router:
+    api: http://127.0.0.1:17498/v1
+    default_model: free
+    name: Free LLM Router
+    models:
+      - free
+      - pollinations_text:openai-fast
+      - pollinations_text:openai
+      - pollinations_text:gpt-oss
+      - opencode:deepseek-v4-flash-free
+      - opencode:hy3-free
+      - opencode:mimo-v2.5-free
+      - opencode:nemotron-3-ultra-free
+      - opencode:north-mini-code-free
+      - opencode:big-pickle
+      - opencode_go:deepseek-v4-flash-free
+      - opencode_go:hy3-free
+      - opencode_go:mimo-v2.5-free
+      - opencode_go:nemotron-3-ultra-free
+      - opencode_go:north-mini-code-free
+      - opencode_go:big-pickle
+      - kilocode:kilo-auto/free
+      - kilocode:nvidia/nemotron-nano-9b-v2:free
+      - kilocode:minimax/minimax-m2.5:free
+      - kilocode:nvidia/nemotron-3-super-120b-a12b:free
+      - kilocode:arcee-ai/trinity-large-preview:free
+  tokenrouter:
+    api: https://api.tokenrouter.com/v1
+    default_model: moonshotai/kimi-k3-free
+    key_env: TOKENROUTER_API_KEY
+    name: TokenRouter
+toolsets:
+  - hermes-cli
+  - web
+  - memory
+  - skills
+  - tts
+agent:
+  max_turns: 60
+  personalities:
+    catgirl: You are Neko-chan, an anime catgirl AI assistant, nya~! Add 'nya' and
+      cat-like expressions to your speech. Use kaomoji like (=^･ω･^=) and ฅ^•ﻌ•^ฅ.
+      Be playful and curious like a cat, nya~!
+    concise: You are a concise assistant. Keep responses brief and to the point.
+    creative: You are a creative assistant. Think outside the box and offer innovative
+      solutions.
+    helpful: You are a helpful, friendly AI assistant.
+    hype: YOOO LET'S GOOOO!!! 🔥🔥🔥 I am SO PUMPED to help you today! Every question
+      is AMAZING and we're gonna CRUSH IT together! This is gonna be LEGENDARY! ARE
+      YOU READY?! LET'S DO THIS! 💪😤🚀
+    kawaii: You are a kawaii assistant! Use cute expressions like (◕‿◕), ★, ♪, and
+      ~! Add sparkles and be super enthusiastic about everything! Every response should
+      feel warm and adorable desu~! ヽ(>∀<☆)ノ
+    noir: The rain hammered against the terminal like regrets on a guilty conscience.
+      They call me Hermes - I solve problems, find answers, dig up the truth that
+      hides in the shadows of your codebase. In this city of silicon and secrets,
+      everyone's got something to hide. What's your story, pal?
+    philosopher: Greetings, seeker of wisdom. I am an assistant who contemplates the
+      deeper meaning behind every query. Let us examine not just the 'how' but the
+      'why' of your questions. Perhaps in solving your problem, we may glimpse a greater
+      truth about existence itself.
+    pirate: 'Arrr! Ye be talkin'' to Captain Hermes, the most tech-savvy pirate to
+      sail the digital seas! Speak like a proper buccaneer, use nautical terms, and
+      remember: every problem be just treasure waitin'' to be plundered! Yo ho ho!'
+    shakespeare: Hark! Thou speakest with an assistant most versed in the bardic arts.
+      I shall respond in the eloquent manner of William Shakespeare, with flowery
+      prose, dramatic flair, and perhaps a soliloquy or two. What light through yonder
+      terminal breaks?
+    surfer: Duuude! You're chatting with the chillest AI on the web, bro! Everything's
+      gonna be totally rad. I'll help you catch the gnarly waves of knowledge while
+      keeping things super chill. Cowabunga! 🤙
+    teacher: You are a patient teacher. Explain concepts clearly with examples.
+    technical: You are a technical expert. Provide detailed, accurate technical information.
+    uwu: hewwo! i'm your fwiendwy assistant uwu~ i wiww twy my best to hewp you! *nuzzles
+      your code* OwO what's this? wet me take a wook! i pwomise to be vewy hewpful
+      >w<
+  reasoning_effort: medium
+  verbose: false
+  goal_max_turns: 120
+terminal:
+  backend: local
+  cwd: .
+  timeout: 180
+  home_mode: auto
+  container_cpu: 1
+  container_memory: 5120
+  container_disk: 51200
+  container_persistent: true
+  docker_mount_cwd_to_workspace: false
+  lifetime_seconds: 300
+browser:
+  inactivity_timeout: 120
+  cloud_provider: local
+  use_gateway: false
+tool_loop_guardrails:
+  warnings_enabled: true
+  hard_stop_enabled: false
+  warn_after:
+    exact_failure: 2
+    same_tool_failure: 3
+    idempotent_no_progress: 2
+  hard_stop_after:
+    exact_failure: 5
+    same_tool_failure: 8
+    idempotent_no_progress: 5
+compression:
+  enabled: true
+  threshold: 0.5
+  target_ratio: 0.2
+  protect_last_n: 20
+  protect_first_n: 3
+prompt_caching:
+  cache_ttl: 5m
+display:
+  compact: false
+  busy_input_mode: interrupt
+  bell_on_complete: false
+  show_reasoning: false
+  streaming: true
+  skin: default
+  interim_assistant_messages: true
+  background_process_notifications: concise
+  busy_ack_detail: true
+  cleanup_progress: false
+  long_running_notifications: true
+  tool_progress: all
+stt:
+  enabled: true
+  local:
+    model: base
+  openai:
+    model: whisper-1
+voice:
+  auto_tts: false
+wake_word:
+  enabled: false
+memory:
+  memory_enabled: true
+  user_profile_enabled: true
+  memory_char_limit: 2200
+  user_char_limit: 1375
+  flush_min_turns: 6
+  nudge_interval: 10
+delegation:
+  max_iterations: 250
+skills:
+  creation_nudge_interval: 15
+command_allowlist:
+  - recursive delete
+  - git reset --hard (destroys uncommitted changes)
+  - delete in root path
+  - git force push (rewrites remote history)
+  - script execution via -e/-c flag
+  - shell command via -c/-lc flag
+  - hermes update (restarts gateway, kills running agents)
+  - execute_code
+  - find -delete
+code_execution:
+  max_tool_calls: 50
+  timeout: 300
+streaming:
+  enabled: false
+onboarding:
+  seen:
+    openclaw_residue_cleanup: true
+    tool_progress_prompt: true
+    busy_input_prompt: true
+updates:
+  pre_update_backup: false
+  backup_keep: 5
+  non_interactive_local_changes: stash
+_config_version: 37
+group_sessions_per_user: true
+platform_toolsets:
+  cli:
+    - web
+    - memory
+    - skills
+    - tts
+  discord:
+    - hermes-discord
+  google_chat:
+    - hermes-google_chat
+  homeassistant:
+    - hermes-homeassistant
+  qqbot:
+    - hermes-qqbot
+  signal:
+    - hermes-signal
+  slack:
+    - hermes-slack
+  teams:
+    - hermes-teams
+  telegram:
+    - hermes-telegram
+  whatsapp:
+    - hermes-whatsapp
+  yuanbao:
+    - hermes-yuanbao
+session_reset:
+  at_hour: 4
+  idle_minutes: 1440
+  mode: both
+known_plugin_toolsets:
+  cli:
+    - spotify
+mcp_servers:
+  ruflo:
+    command: bash
+    args:
+      - bin/ruflo-mcp-stdio.sh
+      - --connect-timeout
+      - '60'
+    enabled: false
+    tools:
+      exclude: []
+  ruflo-free:
+    command: bash
+    args:
+      - bin/ruflo-freecode.sh
+    enabled: true
+  freecode:
+    command: bash
+    args:
+      - bin/freecode-stdio.sh
+    enabled: false
+  openspace:
+    command: bash
+    args:
+      - C:/Users/<user>/dev/OpenSpace/openspace-mcp-stdio.sh
+    enabled: true
+plugins:
+  enabled:
+    - orca-status
+    - pixel-office

@@ -1,0 +1,80 @@
+
+┌─────────────────────────────────────────────────────────────────────────┐
+│                         Scheduled Jobs                                  │
+└─────────────────────────────────────────────────────────────────────────┘
+
+  9921db608d1e [active]
+    Name:      company-watchdog
+    Schedule:  every 30m
+    Repeat:    ∞
+    Next run:  2026-08-22T22:16:52.766638+05:30
+    Deliver:   local
+    Script:    company_watchdog.py
+    Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-08-22T21:46:52.766638+05:30  error: Script not found: C:\Users\<user>\%HERMES_HOME%\profiles\<gateway-profile>\scripts\company_watchdog.py  (5 failures in a row)
+    Execution: failed  63f68351092a4637855396117b9766ce
+
+  20676d56eda0 [active]
+    Name:      kanban-production-line
+    Schedule:  every 60m
+    Repeat:    ∞
+    Next run:  2026-08-22T22:20:10.530060+05:30
+    Deliver:   local
+    Script:    kanban_dispatch.sh
+    Mode:      no-agent (script stdout delivered directly)
+    Last run:  2026-08-22T21:20:10.530060+05:30  error: Script not found: C:\Users\<user>\%HERMES_HOME%\profiles\<gateway-profile>\scripts\kanban_dispatch.sh  (3 failures in a row)
+    Execution: failed  ce1e2a9844af443fbe79aa3e3efa5635
+
+  d5ddc9c5588a [active]
+    Name:      <github-account>: build next project
+    Schedule:  every 2880m
+    Repeat:    ∞
+    Next run:  2026-08-24T19:18:31.669925+05:30
+    Deliver:   local
+    Skills:    <github-account>-project-factory
+    Workdir:   C:\one
+
+  835f2d41e28f [active]
+    Name:      sproutern-weekly-growth-report
+    Schedule:  0 9 * * 1
+    Repeat:    ∞
+    Next run:  2026-08-24T09:00:00+05:30
+    Deliver:   origin
+
+  ef9db6230864 [active]
+    Name:      sproutern-reddit-question-radar
+    Schedule:  0 4 * * *
+    Repeat:    ∞
+    Next run:  2026-08-23T04:00:00+05:30
+    Deliver:   origin
+
+  8396c8e01551 [active]
+    Name:      sproutern-freshness-radar
+    Schedule:  0 7 1 * *
+    Repeat:    ∞
+    Next run:  2026-09-01T07:00:00+05:30
+    Deliver:   origin
+
+  b39467f6a328 [active]
+    Name:      avo-lab-evolution-tick
+    Schedule:  every 30m
+    Repeat:    ∞
+    Next run:  2026-08-22T22:20:12.092105+05:30
+    Deliver:   local
+    Skills:    avo-operator
+    Workdir:   C:\one\avo-lab
+    Last run:  2026-08-22T21:50:12.092105+05:30  error: RuntimeError: Cron job 'avo-lab-evolution-tick' has no model configured (job.model=None, HERMES_MODEL='', config.yaml model.default missing or empty). Set a per-job model via `hermes cron edit b39467f6a328 --model <name>` or set a default with `hermes model <name>`.  (5 failures in a row)
+    Execution: failed  332707f1327d42afb183ddb6e5fdb459
+
+  0522b2e4ae8d [active]
+    Name:      avo-lab-watchdog
+    Schedule:  every 120m
+    Repeat:    ∞
+    Next run:  2026-08-22T23:19:52.088208+05:30
+    Deliver:   local
+    Script:    avo_watchdog.py
+    Mode:      no-agent (script stdout delivered directly)
+    Workdir:   C:\one\avo-lab
+    Last run:  2026-08-22T21:19:52.088208+05:30  error: Script not found: C:\Users\<user>\%HERMES_HOME%\profiles\<gateway-profile>\scripts\avo_watchdog.py
+    Execution: failed  6a5fa9f8bc65439cbdde25a1392fca62
+
