@@ -83,7 +83,10 @@ def main():
         results.append(("PYTEST", ok, "; ".join(tails)[:160]))
     # 2b. self-test subcommands
     ran = 0
+    _self_path = os.path.abspath(__file__)
     for f in pys:
+        if os.path.abspath(f) == _self_path: continue  # don't self-test the harness
+        if os.path.basename(f) == "qa_harness.py": continue  # skip harness copies
         try:
             src = open(f, encoding="utf-8", errors="ignore").read()
         except Exception:
