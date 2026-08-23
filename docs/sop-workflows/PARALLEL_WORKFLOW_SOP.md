@@ -48,15 +48,15 @@ For large features, split into N independent sub-tasks:
 ## 7. Commands Quick Reference
 ```
 # Agent sets up isolation
-git -C /c/one/it-company-workspace worktree add /c/one/wt/<agent>-<task> -b feat/<agent>/<task>
+git -C <workspace-root>/it-company-workspace worktree add <workspace-root>/wt/<agent>-<task> -b feat/<agent>/<task>
 # Work, then commit
-git -C /c/one/wt/<agent>-<task> add -A && git -C /c/one/wt/<agent>-<task> commit -m "feat: ..."
-git -C /c/one/wt/<agent>-<task> push -u origin feat/<agent>/<task>
+git -C <workspace-root>/wt/<agent>-<task> add -A && git -C <workspace-root>/wt/<agent>-<task> commit -m "feat: ..."
+git -C <workspace-root>/wt/<agent>-<task> push -u origin feat/<agent>/<task>
 # Open PR via gh (<github-account-2>) or MCP
 gh pr create --base main --head feat/<agent>/<task> --title "..." --body "..."
 # After merge
-git -C /c/one/it-company-workspace worktree remove /c/one/wt/<agent>-<task>
-git -C /c/one/it-company-workspace branch -d feat/<agent>/<task>
+git -C <workspace-root>/it-company-workspace worktree remove <workspace-root>/wt/<agent>-<task>
+git -C <workspace-root>/it-company-workspace branch -d feat/<agent>/<task>
 ```
 
 ## 8. Security Merge Gate (MANDATORY)

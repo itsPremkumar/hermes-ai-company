@@ -44,7 +44,7 @@ free-tier LLM inference (OpenRouter `:free` + NVIDIA NIM fallback chain). Cost: 
 ## 3. Folder Layout
 
 ```
-C:\one\hermes-ai-company\
+<workspace-root>\hermes-ai-company\
 ├── README.md              ← you are here
 ├── docs\                  ← the 8 manuals above
 ├── souls\                 ← every bot's SOUL.md by team (executive/, delivery/, …)

@@ -1,7 +1,7 @@
 # 06 — Scripts
 
 Canonical location: `%HERMES_HOME%\hermes\scripts\` (cron refers to this folder).
-Copies in `C:\one\hermes-ai-company\scripts\` are for version control / reading.
+Copies in `<workspace-root>\hermes-ai-company\scripts\` are for version control / reading.
 
 ## company_watchdog.py — the alarm system
 - **Fires:** every 30 min (no_agent cron `company-watchdog`)
@@ -40,4 +40,4 @@ Copies in `C:\one\hermes-ai-company\scripts\` are for version control / reading.
 | Gateway cron store | <gateway-profile> profile via `hermes cron ...` CLI |
 | Kanban board DB | `%HERMES_HOME%\hermes\kanban\boards\it-company-ops\kanban.db` |
 | Ops dashboard | `%HERMES_HOME%\hermes\ops-dashboard.html` |
-| This repo copy | `C:\one\hermes-ai-company\` |
+| This repo copy | `<workspace-root>\hermes-ai-company\` |

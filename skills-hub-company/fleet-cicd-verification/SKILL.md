@@ -59,12 +59,12 @@ The `write_file` tool maps `/c/one` → `C:\c\one`, but the bash terminal (MSYS)
 maps `/c/one` → `C:\one`. Files written by the file tool land in `C:\c\one`
 while terminal commands operate on `C:\one`. Symptom: `os.listdir('/c/one')`
 raises `FileNotFoundError` in Python.
-**Fix:** After writing, move (`mv /c/c/one/... /c/one/...`) OR write using
-**native Windows paths** `C:/one/...` everywhere in Python. Shell commands use
+**Fix:** After writing, move (`mv /c<workspace-root>/... <workspace-root>/...`) OR write using
+**native Windows paths** `<workspace-root>/...` everywhere in Python. Shell commands use
 MSYS `/c/one`. Mixing them is the trap. See `references/windows-dev-pitfalls.md`.
 
 ### P2. os.walk backslash pruning bug (secret scanners)
-On Windows, `os.walk` returns BACKSLASH `root` (e.g. `C:\one\repo\node_modules`).
+On Windows, `os.walk` returns BACKSLASH `root` (e.g. `<workspace-root>\repo\node_modules`).
 A POSIX-style skip `if "/node_modules" in root` NEVER matches → the security
 scanner walks ALL vendor/build code → false-positive "secret leaks" in every
 repo → 11/11 repos falsely FAIL security. The same applies to `.next`, `dist`,

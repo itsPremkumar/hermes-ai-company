@@ -242,7 +242,7 @@ mcp_servers:
   openspace:
     command: bash
     args:
-      - C:/Users/<user>/dev/OpenSpace/openspace-mcp-stdio.sh
+      - <path-to>/openspace-mcp-stdio.sh  # adjust to your install
     enabled: true
 plugins:
   enabled:

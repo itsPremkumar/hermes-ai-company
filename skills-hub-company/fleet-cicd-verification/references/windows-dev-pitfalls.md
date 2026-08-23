@@ -4,20 +4,20 @@ These bit us during a real build on a Windows 10 host with the MSYS (git-bash)
 terminal. Capture them so the next session skips the wasted hour.
 
 ## P1 — write_file vs terminal path mismatch
-- `write_file` (the agent file tool) resolves `/c/one/...` → `C:\c\one\...`
+- `write_file` (the agent file tool) resolves `<workspace-root>/...` → `C:\c\one\...`
   (it prepends `C:\` to the MSYS path literally).
 - The `terminal` tool runs MSYS bash, which resolves `/c/one` → `C:\one`.
-- Consequence: a file written at `/c/one/_devops_loop/verify.py` by the file tool
+- Consequence: a file written at `<workspace-root>/_devops_loop/verify.py` by the file tool
   actually lands in `C:\c\one\_devops_loop\verify.py`, while `ls /c/one` shows
   nothing there. Python then does `os.listdir('/c/one')` and raises
   `FileNotFoundError: '/c/one'`.
-- Fix A (one-off): `mkdir -p /c/one/_devops_loop && mv /c/c/one/_devops_loop/* /c/one/_devops_loop/ && rm -rf /c/c`
+- Fix A (one-off): `mkdir -p <workspace-root>/_devops_loop && mv /c<workspace-root>/_devops_loop/* <workspace-root>/_devops_loop/ && rm -rf /c/c`
 - Fix B (do it right): write Python files using NATIVE Windows paths
-  (`C:/one/...`). Shell commands can still use MSYS `/c/one`. Don't mix the two
+  (`<workspace-root>/...`). Shell commands can still use MSYS `/c/one`. Don't mix the two
   in the same path string.
 
 ## P2 — os.walk backslash pruning (secret scanner false positives)
-- `os.walk` on Windows yields `root` with backslashes: `C:\one\repo\node_modules`.
+- `os.walk` on Windows yields `root` with backslashes: `<workspace-root>\repo\node_modules`.
 - A POSIX skip like `if "/node_modules" in root: continue` NEVER matches
   (the substring uses `/`, the path uses `\`). So a security scanner walks
   `node_modules`, `.next`, `dist`, `build` and flags vendor READMEs (`dotenv`
@@ -36,11 +36,11 @@ terminal. Capture them so the next session skips the wasted hour.
   `service-account.json`, `apphosting.yaml`, `*.py/*.ts/*.js`, etc.).
 
 ## P3 — cronjob `script` must be a bare filename
-- Passing `script='C:/one/_devops_loop/loop.py'` errors:
+- Passing `script='<workspace-root>/_devops_loop/loop.py'` errors:
   "Script path must be relative to ~/.hermes/scripts/. Got absolute or
   home-relative path".
 - Fix: write a launcher to `$APPDATA/hermes/scripts/devops_loop_daily.sh`
-  (content: `cd "C:/one/_devops_loop" && python loop.py --root C:/one`) and pass
+  (content: `cd "<workspace-root>/_devops_loop" && python loop.py --root C:/one`) and pass
   `script='devops_loop_daily.sh'`.
 
 ## P4 — execute_code blocked in cron mode

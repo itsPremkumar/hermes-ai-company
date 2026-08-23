@@ -10,7 +10,7 @@ prunes vendor/build dirs IN-PLACE (platform-proof on Windows backslash paths)
 so it never flags node_modules/.next/dist false positives.
 
 Usage:
-  python verify_engine.py --repo C:/one/sproutern --json out.json
+  python verify_engine.py --repo <workspace-root> --json out.json
   python verify_engine.py --all  C:/one --json latest_report.json
 Stdlib-only + node/curl/git shell calls, every subprocess timeout-bounded.
 """
@@ -86,7 +86,7 @@ def verify_repo(repo):
     rtype = detect(repo)
     sec = angle_security(repo)
     # (structure/frontmatter/compile/selftest/docs/deploy/live omitted for brevity —
-    #  see the full live engine at C:/one/_devops_loop/verify.py)
+    #  see the full live engine at <workspace-root>/verify.py)
     report = {"repo": os.path.basename(repo.rstrip("/")), "type": rtype,
               "timestamp": datetime.datetime.utcnow().isoformat()+"Z",
               "angles": {"security": sec}}

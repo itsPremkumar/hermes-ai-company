@@ -306,7 +306,7 @@ build (2026-07-19) needed exactly this cleanup before push.
 ## Free asset CREATION (ffmpeg-only, zero downloads)
 When the product needs to *generate* assets (not just download stock), build a
 **free, offline ffmpeg-static engine** — no network, no keys, no node-canvas.
-Reference implementation: `C:\one\asset-creator` (10 functions, 14 passing tests).
+Reference implementation: `<workspace-root>\asset-creator` (10 functions, 14 passing tests).
 It creates: background/title/quote images, Ken-Burns/kinetic/countdown video clips,
 procedural background music, 5 SFX kinds, GIF, and branded placeholders. Wire it into
 AVG's `src/agentic/acquire.ts` as a fallback source (self-healing when stock fails).
@@ -321,7 +321,7 @@ and record the screen as video — all free, no GPU, no paid keys. The agent "se
 the screen through the **model's native vision** on the captured PNG (NOT a
 separate vision API — user directive: "use your model to see the image").
 
-Reference implementation: `C:\one\computer-agent` (Python; `src/driver.py` wraps
+Reference implementation: `<workspace-root>\computer-agent` (Python; `src/driver.py` wraps
 `cua-driver call`, `src/agent.py` = observe/act/generate loop, `demo_record.py`
 = open-site + type + record-MP4 proof). Verified live: launched Chrome, navigated
 + typed, recorded a valid 1920×1080 H.264 MP4.

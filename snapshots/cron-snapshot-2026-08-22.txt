@@ -62,7 +62,7 @@
     Next run:  2026-08-22T22:20:12.092105+05:30
     Deliver:   local
     Skills:    avo-operator
-    Workdir:   C:\one\avo-lab
+    Workdir:   <workspace-root>\avo-lab
     Last run:  2026-08-22T21:50:12.092105+05:30  error: RuntimeError: Cron job 'avo-lab-evolution-tick' has no model configured (job.model=None, HERMES_MODEL='', config.yaml model.default missing or empty). Set a per-job model via `hermes cron edit b39467f6a328 --model <name>` or set a default with `hermes model <name>`.  (5 failures in a row)
     Execution: failed  332707f1327d42afb183ddb6e5fdb459
 
@@ -74,7 +74,7 @@
     Deliver:   local
     Script:    avo_watchdog.py
     Mode:      no-agent (script stdout delivered directly)
-    Workdir:   C:\one\avo-lab
+    Workdir:   <workspace-root>\avo-lab
     Last run:  2026-08-22T21:19:52.088208+05:30  error: Script not found: C:\Users\<user>\%HERMES_HOME%\profiles\<gateway-profile>\scripts\avo_watchdog.py
     Execution: failed  6a5fa9f8bc65439cbdde25a1392fca62
 
