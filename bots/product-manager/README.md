@@ -1,5 +1,9 @@
 # Bot: `product-manager`
 
+**Role:** Product Manager
+
+> Goals → specs; light market research; feeds Delivery room.
+
 **Team:** product-manager · **Profile path (live):** `%HERMES_HOME%/profiles/product-manager/`
 
 ## Identity

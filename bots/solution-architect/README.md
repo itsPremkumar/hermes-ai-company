@@ -1,5 +1,9 @@
 # Bot: `solution-architect`
 
+**Role:** Solution Architect
+
+> System design blueprints for complex cards.
+
 **Team:** solution-architect · **Profile path (live):** `%HERMES_HOME%/profiles/solution-architect/`
 
 ## Identity

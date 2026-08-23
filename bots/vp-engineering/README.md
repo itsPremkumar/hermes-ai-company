@@ -1,5 +1,9 @@
 # Bot: `vp-engineering`
 
+**Role:** VP Engineering
+
+> Engineering oversight (advisory).
+
 **Team:** vp-engineering · **Profile path (live):** `%HERMES_HOME%/profiles/vp-engineering/`
 
 ## Identity

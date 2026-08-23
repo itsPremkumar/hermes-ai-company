@@ -1,5 +1,9 @@
 # Bot: `business-dev`
 
+**Role:** Business Development
+
+> Lead-gen research, repo growth, price monitoring, content-site marketing.
+
 **Team:** business-dev · **Profile path (live):** `%HERMES_HOME%/profiles/business-dev/`
 
 ## Identity

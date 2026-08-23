@@ -1,5 +1,9 @@
 # Bot: `vp-sales`
 
+**Role:** VP Sales
+
+> Outreach research, pricing intel, voice summaries.
+
 **Team:** vp-sales · **Profile path (live):** `%HERMES_HOME%/profiles/vp-sales/`
 
 ## Identity

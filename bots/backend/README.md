@@ -1,5 +1,9 @@
 # Bot: `backend`
 
+**Role:** Backend Engineer
+
+> Server-side builds in worktrees; issue→PR SOP.
+
 **Team:** backend · **Profile path (live):** `%HERMES_HOME%/profiles/backend/`
 
 ## Identity

@@ -1,5 +1,9 @@
 # Bot: `product-owner`
 
+**Role:** Product Owner
+
+> Backlog + acceptance criteria (advisory).
+
 **Team:** product-owner · **Profile path (live):** `%HERMES_HOME%/profiles/product-owner/`
 
 ## Identity

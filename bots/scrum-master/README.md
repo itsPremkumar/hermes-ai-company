@@ -1,5 +1,9 @@
 # Bot: `scrum-master`
 
+**Role:** Scrum Master
+
+> Ceremony facilitation (advisory).
+
 **Team:** scrum-master · **Profile path (live):** `%HERMES_HOME%/profiles/scrum-master/`
 
 ## Identity

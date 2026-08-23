@@ -1,5 +1,9 @@
 # Bot: `data-engineer`
 
+**Role:** Data Engineer
+
+> Data pipelines & reports via code_execution.
+
 **Team:** data-engineer · **Profile path (live):** `%HERMES_HOME%/profiles/data-engineer/`
 
 ## Identity

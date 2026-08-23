@@ -1,5 +1,9 @@
 # Bot: `fullstack-dev`
 
+**Role:** Fullstack Developer — PRIMARY WORKER
+
+> Production-line builder: research-radar shipped end-to-end by this bot.
+
 **Team:** fullstack-dev · **Profile path (live):** `%HERMES_HOME%/profiles/fullstack-dev/`
 
 ## Identity

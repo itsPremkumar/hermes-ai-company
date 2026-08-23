@@ -1,5 +1,9 @@
 # Bot: `security-engineer`
 
+**Role:** Security Engineer
+
+> Secret scans, dependency audits, vetting; merge sign-off authority.
+
 **Team:** security-engineer · **Profile path (live):** `%HERMES_HOME%/profiles/security-engineer/`
 
 ## Identity

@@ -1,5 +1,9 @@
 # Bot: `it-support`
 
+**Role:** IT Support
+
+> ONLY bot with computer_use: machine health, GUI fixes.
+
 **Team:** it-support · **Profile path (live):** `%HERMES_HOME%/profiles/it-support/`
 
 ## Identity

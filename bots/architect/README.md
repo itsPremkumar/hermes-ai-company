@@ -1,5 +1,9 @@
 # Bot: `architect`
 
+**Role:** Architect (legacy)
+
+> Superseded by solution-architect; hide candidate.
+
 **Team:** architect · **Profile path (live):** `%HERMES_HOME%/profiles/architect/`
 
 ## Identity

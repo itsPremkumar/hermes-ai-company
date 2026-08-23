@@ -1,5 +1,9 @@
 # Bot: `engineering-manager`
 
+**Role:** Engineering Manager
+
+> People/process management advice.
+
 **Team:** engineering-manager · **Profile path (live):** `%HERMES_HOME%/profiles/engineering-manager/`
 
 ## Identity

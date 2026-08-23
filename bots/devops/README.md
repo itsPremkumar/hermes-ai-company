@@ -1,5 +1,9 @@
 # Bot: `devops`
 
+**Role:** DevOps (legacy)
+
+> Superseded by devops-engineer; hide candidate.
+
 **Team:** devops · **Profile path (live):** `%HERMES_HOME%/profiles/devops/`
 
 ## Identity

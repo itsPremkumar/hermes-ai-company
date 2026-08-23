@@ -1,5 +1,9 @@
 # Bot: `ui-ux-designer`
 
+**Role:** UI/UX Designer
+
+> Mockups + design review.
+
 **Team:** ui-ux-designer · **Profile path (live):** `%HERMES_HOME%/profiles/ui-ux-designer/`
 
 ## Identity

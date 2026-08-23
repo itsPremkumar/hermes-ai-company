@@ -1,5 +1,9 @@
 # Bot: `senior-frontend`
 
+**Role:** Senior Frontend Engineer
+
+> Reserve depth for complex UI.
+
 **Team:** senior-frontend · **Profile path (live):** `%HERMES_HOME%/profiles/senior-frontend/`
 
 ## Identity

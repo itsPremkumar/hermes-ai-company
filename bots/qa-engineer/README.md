@@ -1,5 +1,9 @@
 # Bot: `qa-engineer`
 
+**Role:** QA Engineer
+
+> Test authoring support.
+
 **Team:** qa-engineer · **Profile path (live):** `%HERMES_HOME%/profiles/qa-engineer/`
 
 ## Identity

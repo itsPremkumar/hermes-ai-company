@@ -1,5 +1,9 @@
 # Bot: `junior-dev`
 
+**Role:** Junior Developer
+
+> Shadow/learning tasks; minimal tools.
+
 **Team:** junior-dev · **Profile path (live):** `%HERMES_HOME%/profiles/junior-dev/`
 
 ## Identity

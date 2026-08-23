@@ -1,5 +1,9 @@
 # Bot: `tester`
 
+**Role:** Tester
+
+> Exploratory test checklists.
+
 **Team:** tester · **Profile path (live):** `%HERMES_HOME%/profiles/tester/`
 
 ## Identity

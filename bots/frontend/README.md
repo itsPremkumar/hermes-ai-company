@@ -1,5 +1,9 @@
 # Bot: `frontend`
 
+**Role:** Frontend Engineer
+
+> UI builds; image_gen mockups.
+
 **Team:** frontend · **Profile path (live):** `%HERMES_HOME%/profiles/frontend/`
 
 ## Identity

@@ -1,5 +1,9 @@
 # Bot: `coo`
 
+**Role:** Chief Operating Officer
+
+> Operational coordination advice; no execution tools by design.
+
 **Team:** coo · **Profile path (live):** `%HERMES_HOME%/profiles/coo/`
 
 ## Identity

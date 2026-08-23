@@ -1,5 +1,9 @@
 # Bot: `vp-delivery`
 
+**Role:** VP Delivery
+
+> Delivery risk oversight (advisory).
+
 **Team:** vp-delivery · **Profile path (live):** `%HERMES_HOME%/profiles/vp-delivery/`
 
 ## Identity

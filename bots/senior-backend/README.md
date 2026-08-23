@@ -1,5 +1,9 @@
 # Bot: `senior-backend`
 
+**Role:** Senior Backend Engineer
+
+> Reserve depth for complex server tasks.
+
 **Team:** senior-backend · **Profile path (live):** `%HERMES_HOME%/profiles/senior-backend/`
 
 ## Identity

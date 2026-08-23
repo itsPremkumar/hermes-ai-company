@@ -1,5 +1,9 @@
 # Bot: `technical-writer`
 
+**Role:** Technical Writer
+
+> Docs, READMEs, blogs, content sites.
+
 **Team:** technical-writer · **Profile path (live):** `%HERMES_HOME%/profiles/technical-writer/`
 
 ## Identity

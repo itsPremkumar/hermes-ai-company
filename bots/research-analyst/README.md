@@ -1,5 +1,9 @@
 # Bot: `research-analyst`
 
+**Role:** Research Analyst
+
+> PRIMARY live-data collector: web search, X listening, market/competitor scans.
+
 **Team:** research-analyst · **Profile path (live):** `%HERMES_HOME%/profiles/research-analyst/`
 
 ## Identity

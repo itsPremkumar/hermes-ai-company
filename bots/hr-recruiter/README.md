@@ -1,5 +1,9 @@
 # Bot: `hr-recruiter`
 
+**Role:** HR Recruiter
+
+> JDs, screening criteria, market research.
+
 **Team:** hr-recruiter · **Profile path (live):** `%HERMES_HOME%/profiles/hr-recruiter/`
 
 ## Identity

@@ -1,5 +1,9 @@
 # Bot: `devops-engineer`
 
+**Role:** DevOps Engineer
+
+> Vercel MCP deploys, CI pipelines, cleanup routines.
+
 **Team:** devops-engineer · **Profile path (live):** `%HERMES_HOME%/profiles/devops-engineer/`
 
 ## Identity
