@@ -4,6 +4,8 @@
 > Bot Mode on a single 6 GB RAM Windows laptop. Zero paid services. Zero third-party daemons.
 > Built, tested, and verified on **2026-08-22**.
 
+
+> **Current live org:** lean 14-bot fleet (10 core + 4 agentic specialists). The `bots/` folder retains kits for the full historical 34-bot roster — deploy any subset.
 ---
 
 ## 1. The Company in One Paragraph

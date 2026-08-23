@@ -1,10 +1,6 @@
 fallback_providers:
-  - provider: nvidia
-    model: nvidia/llama-3.3-nemotron-super-49b-v1
   - provider: openrouter
     model: poolside/laguna-s-2.1:free
-  - provider: openrouter
-    model: z-ai/glm-5.2:free
 model:
   default: poolside/laguna-s-2.1:free
   provider: nous
@@ -52,12 +48,11 @@ providers:
     key_env: TOKENROUTER_API_KEY
     name: TokenRouter
 toolsets:
-  - hermes-cli
-  - terminal
   - file
   - code_execution
-  - vision
+  - memory
   - skills
+  - todo
 agent:
   max_turns: 200
   personalities:
@@ -196,64 +191,9 @@ _config_version: 37
 group_sessions_per_user: true
 platform_toolsets:
   cli:
-    - terminal
     - file
     - code_execution
-    - vision
+    - memory
     - skills
-  discord:
-    - hermes-discord
-  google_chat:
-    - hermes-google_chat
-  homeassistant:
-    - hermes-homeassistant
-  qqbot:
-    - hermes-qqbot
-  signal:
-    - hermes-signal
-  slack:
-    - hermes-slack
-  teams:
-    - hermes-teams
-  telegram:
-    - hermes-telegram
-  whatsapp:
-    - hermes-whatsapp
-  yuanbao:
-    - hermes-yuanbao
-session_reset:
-  at_hour: 4
-  idle_minutes: 1440
-  mode: both
-known_plugin_toolsets:
-  cli:
-    - spotify
-mcp_servers:
-  ruflo:
-    command: bash
-    args:
-      - bin/ruflo-mcp-stdio.sh
-      - --connect-timeout
-      - '60'
-    enabled: false
-    tools:
-      exclude: []
-  ruflo-free:
-    command: bash
-    args:
-      - bin/ruflo-freecode.sh
-    enabled: true
-  freecode:
-    command: bash
-    args:
-      - bin/freecode-stdio.sh
-    enabled: false
-  openspace:
-    command: bash
-    args:
-      - C:/Users/<user>/dev/OpenSpace/openspace-mcp-stdio.sh
-    enabled: true
-plugins:
-  enabled:
-    - orca-status
+    - todo
     - pixel-office
