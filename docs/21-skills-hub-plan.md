@@ -1,5 +1,7 @@
 # 21 — Skills Hub Utilization Plan
 
+Browse online: **[Skills Hub](https://hermes-agent.nousresearch.com/docs/skills)** — https://hermes-agent.nousresearch.com/docs/skills
+
 The Skills Hub indexes **90,000+ skills across 14 registries** (official,
 skills-sh, clawhub, github, lobehub, nvidia, openai, anthropic, huggingface,
 voltagent, gstack, minimax, browse-sh, well-known). This plan governs how our
