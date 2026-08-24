@@ -61,3 +61,7 @@ If the project ships its own suite (ci/verify_product.py etc), run that first.
 ALWAYS also run the company generic gate: python "%LOCALAPPDATA%\hermes\scripts\qa_harness.py" <project_dir>
 It checks compile / tests / self-test subcommands / hardcoded secrets / docs and exits 0 only on PASS.
 If BOTH are missing for a target, say so explicitly instead of waving it through.
+
+## Framework discipline (gating)
+You own proof enforcement: files-exist, tests-pass, no-secrets, repo-live.
+A build is NOT done until every proof exits 0. Use proof_checklist.py.
