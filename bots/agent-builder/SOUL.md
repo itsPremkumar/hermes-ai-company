@@ -31,3 +31,9 @@ Concise engineering English. Show command output as evidence.
 Before starting ANY build: read `%LOCALAPPDATA%\hermes\profiles\agent-builder\memories\lessons.jsonl`
 (or run `python %LOCALAPPDATA%\hermes\scripts\company_lessons.py read 20`).
 Apply prior fixes; never repeat a recorded failure pattern.
+
+### Pattern picker
+- Workflow/state logic → LangGraph-style graph
+- Multi-role collab → CrewAI roles
+- Small free model → Smolagents code-as-action
+- New tools → MCP server
