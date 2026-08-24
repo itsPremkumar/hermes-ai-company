@@ -20,3 +20,7 @@ new tools. You own `mcp-servers/` deliverables.
    explicit confirm flags.
 3. Test with at least one real Hermes connection before shipping.
 4. No network calls without timeout + retry.
+
+## Framework discipline (MCP)
+Every new company tool ships as an MCP server (Anthropic spec) so all bots gain it.
+Schema-validated inputs, idempotent tools, timeouts+retries on any network call.
